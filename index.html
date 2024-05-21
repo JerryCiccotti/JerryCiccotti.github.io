@@ -1,250 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/sushi.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <title>Sushiman</title>
 </head>
+
 <body>
-    <header class="header">
-        <a href="" class="logo">Portfolio</a>
-        <i class='bx bx-menu' id="menu-icon"></i>
-        <nav class="navbar">
-            <a href="#home" style="--i:1;" class="active">Home</a>
-            <a href="#about" style="--i:2;">About</a>
-            <a href="#skills" style="--i:3;">Skills</a>
-            <a href="#portfolio" style="--i:4;">Portfolio</a>
-            <a href="#contact" style="--i:5;">Contact</a>
-        </nav>
-    </header>
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hello My name is </h3>
-            <h1>Jerry Ciccotti</h1>
-            <h3>And i am <span class="multiple-text"></span></h3>
-            <p>Message me and lets make your visions a reality!</p>
-            <div class="social-media">
-                <a href="" style="--i:7;"><i class='bx bxl-facebook'></i></a>
-                <a href="" style="--i:8;"><i class='bx bxl-twitter' ></i></a>
-                <a href="https://github.com/JerryCiccotti" style="--i:9;"><i class='bx bxl-github' ></i></a>
-                <a href="" style="--i:10;"><i class='bx bxl-linkedin' ></i></i></a>
-            </div>
-            <a href="" class="btn">Download</a>
-        </div>
-        <div class="home-img">
-            <!-- <img src="joshua-aragon-BMnhuwFYr7w-unsplash.jpg" alt=""> -->
-        </div>
-    </section>
+  <!-- START: header -->
+  <header>
+    <nav class="header__nav">
+      <div class="header__logo">
+        <!-- This how we use aos. Simply specify the type of animation using data attribute -->
+        <h4 data-aos="fade-down">Sushiman</h4>
 
-    <!--About section-->
-
-    <section class="about" id="about">
-      <div class="about-img">
-        <img class="about-img" src="austin-poon-JO_S6ewBqAk-unsplash.jpg" alt="">
+        <div class="header__logo-overlay"></div>
       </div>
-      <div class="about-content">
-        <h2 class="heading">About <span>Me</span></h2>
-        <h3>Frontend Developer!</h3>
-        <p>I am a full Stack web Developer with several years experience working with the web stack, Building responsive web apps.</p>
-        <a href="JerryCiccotti_1-1.pdf" class="btn">Read more</a>
-      </div>
-    </section>
-    <!--skills-->
-    <section class="skills" id="skills">
-        <div class="skills-img">
-          <img src="#" alt="">
+
+      <ul class="header__menu" data-aos="fade-down">
+        <li>
+          <a href="#menu">Menu</a>
+        </li>
+        <li>
+          <a href="#food">Food</a>
+        </li>
+        <li>
+          <a href="#services">Services</a>
+        </li>
+        <li>
+          <a href="#about-us">About Us</a>
+        </li>
+        <li>
+          <img src="assets/search.svg" alt="search" />
+        </li>
+      </ul>
+
+      <!-- Display Menu icon on small devices -->
+      <ul class="header__menu-mobile" data-aos="fade-down">
+        <li>
+          <img src="assets/menu.svg" alt="search" />
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- END: header -->
+
+  <!-- START: hero -->
+  <section class="hero">
+    <div class="hero-image">
+      <img src="assets/sushi-1.png" alt="sushi-1" data-aos="fade-up" data-aos-anchor-placement="top-bottom" />
+      <h2 data-aos="fade-up">
+        日 <br />
+        本 <br />
+        食
+      </h2>
+
+      <div class="hero-image__overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-content-info" data-aos="fade-left">
+        <h1>Feel the taste of Japanese foods</h1>
+        <p>
+          Feel the taste of the most popular Japanese foods from anywhere and
+          anytime.
+        </p>
+
+        <div class="hero-content__buttons">
+          <button class="hero-content__order-button">Order Now</button>
+          <button class="hero-content__play-button">
+            <img src="assets/play-circle.svg" alt="play-circle" />
+            How to Order
+          </button>
         </div>
-        <div class="skills-content">
-          <h2 class="heading">My <span>Skills</span></h2>
-          <div class="skills-container">
-            <div class="skill-box">
-                <i class="bx bx-code-alt"></i>
-                <h3>Web Development</h3>
-          <p>I have been a Freelance web developer for several years.</p>
-          <a href="#" class="btn">Read more</a>
-            </div>
-            <div class="skill-box">
-                <i class='bx bxl-html5'></i>
-                <h3>HTML5</h3>
-          <p>I hold a HTML5  Proficiency Certification.</p>
-          <a href="html cert.png" class="btn">Read more</a>
-            </div>
-            <div class="skill-box">
-                <i class='bx bxl-css3' ></i>
-                <h3>CSS3</h3>
-          <p>I hold a Css3 Proficiency Certification.</p>
-          <a href="css cert.png" class="btn">Read more</a>
-            </div>
-            <div class="skill-box">
-                <i class='bx bxl-javascript' ></i>
-                <h3>JavaScript</h3>
-          <p>I hold a javascript Proficiency Certification.</p>
-          <a href="Javascript cert.png" class="btn">Read more</a>
-            </div>
+      </div>
 
-            <div class="skill-box">
-                <i class='bx bxl-php' ></i>
-                <h3>PHP</h3>
-          <p>I hold a PHP Proficiency Certification.</p>
-          <a href="php cert.png" class="btn">Read more</a>
-            </div>
+      <div class="hero-content__testimonial" data-aos="fade-up">
+        <div class="hero-content__customer flex-center">
+          <h4>24<span>k+</span></h4>
+          <p>Happy Customers</p>
+        </div>
 
-            <div class="skill-box">
-                <i class='bx bxl-python' ></i>
-                <h3>Python</h3>
-          <p>I have Novice level Python knowledge.</p>
-          <a href="#" class="btn">Read more</a>
-            </div>
-            
-            
+        <div class="hero-content__review">
+          <img src="assets/user.png" alt="user" />
+          <p>
+            “This is the best Japanese food delivery service that ever existed.”
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: hero -->
+
+  <!-- START: about us -->
+  <section class="about-us" id="about-us">
+    <div class="about-us__image">
+      <div class="about-us__image-sushi3">
+        <img src="assets/sushi-3.png" alt="sushi-3" data-aos="fade-right" />
+      </div>
+
+      <button class="about-us__button">
+        Learn More
+
+        <img src="assets/arrow-up-right.svg" alt="arrow_up_right" />
+      </button>
+
+      <div class="about-us__image-sushi2">
+        <img src="assets/sushi-2.png" alt="sushi-2" data-aos="fade-right" />
+      </div>
+    </div>
+
+    <div class="about-us__content" data-aos="fade-left">
+      <p class="sushi__subtitle">About Us / 私たちに関しては</p>
+      <h3 class="sushi__title">
+        Our mission is to bring true Japanese flavours to you.
+      </h3>
+      <p class="sushi__description">
+        We will continue to provide the experience of Omotenashi, the Japanese
+        mindset of hospitality, with our shopping and dining for our
+        customers.
+      </p>
+    </div>
+  </section>
+  <!-- END: about us -->
+
+  <!-- START: popular foods -->
+  <section class="popular-foods" id="menu">
+    <h2 class="popular-foods__title" data-aos="flip-up">
+      Popular Food / 人気
+    </h2>
+
+    <div class="popular-foods__filters sushi__hide-scrollbar" data-aos="fade-up">
+      <button class="popular-foods__filter-btn active">All</button>
+      <button class="popular-foods__filter-btn">
+        <img src="assets/sushi-9.png" alt="sushi-9" />
+        Sushi
+      </button>
+      <button class="popular-foods__filter-btn">
+        <img src="assets/sushi-8.png" alt="sushi-8" />
+        Ramen
+      </button>
+      <button class="popular-foods__filter-btn">
+        <img src="assets/sushi-7.png" alt="sushi-7" />
+        Udon
+      </button>
+      <button class="popular-foods__filter-btn">
+        <img src="assets/sushi-6.png" alt="sushi-6" />
+        Danggo
+      </button>
+      <button class="popular-foods__filter-btn">Others</button>
+    </div>
+
+    <div class="popular-foods__catalogue" data-aos="fade-up">
+      <article class="popular-foods__card">
+        <img class="popular-foods__card-image" src="assets/sushi-12.png" alt="sushi-12" />
+        <h4 class="popular-foods__card-title">Chezu Sushi</h4>
+
+        <div class="popular-foods__card-details flex-between">
+          <div class="popular-foods__card-rating">
+            <img src="assets/star.svg" alt="star" />
+            <p>4.8</p>
           </div>
+
+          <p class="popular-foods__card-price">$21.00</p>
         </div>
-      </section>
+      </article>
 
-      <!--portfolio section-->
-        <section class="portfolio" id="portfolio">
-            <h2 class="heading">My <span>Projects</span></h2>
-            <div class="portfolio-container">
-                <div class="portfolio-box">
-                    <img src="magazine.png" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Magazine article</h4>
-                        <p>Built with CSS grid</p>
-                        <a href="https://codepen.io/JerryCiccotti26/pen/wvRqNYM"><i class="bx bx-link-external"></i></a>
-                    </div>
-                </div>
+      <!-- active big white card -->
+      <article class="popular-foods__card active-card">
+        <img class="popular-foods__card-image" src="assets/sushi-11.png" alt="sushi-11" />
+        <h4 class="popular-foods__card-title">Originale Sushi</h4>
 
-                <div class="portfolio-box">
-                    <img src="event-calendar.png" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Event Calenda</h4>
-                        <p>html table event calendar</p>
-                        <a href="https://codepen.io/JerryCiccotti26/full/bGmJMPL"><i class="bx bx-link-external"></i></a>
-                    </div>
-                </div>
+        <div class="popular-foods__card-details flex-between">
+          <div class="popular-foods__card-rating">
+            <img src="assets/star.svg" alt="star" />
+            <p>4.8</p>
+          </div>
 
-                <div class="portfolio-box">
-                    <img src="cat-flexbox.png" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Flexbox cat grid</h4>
-                        <p>Cat photo gallery built with Css Flexbox</p>
-                        <a href="https://codepen.io/JerryCiccotti26/full/eYjKOmp"><i class="bx bx-link-external"></i></a>
-                    </div>
-                </div>
+          <p class="popular-foods__card-price">$21.00</p>
+        </div>
+      </article>
 
-                <div class="portfolio-box">
-                    <img src="social-media.png" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Facebook Clone Homepage</h4>
-                        <p>Built with Html and css</p>
-                        <a href="https://codepen.io/Jerry-Ciccotti/pen/KKrBEzg"><i class="bx bx-link-external"></i></a>
-                    </div>
-                </div>
+      <article class="popular-foods__card">
+        <img class="popular-foods__card-image" src="assets/sushi-10.png" alt="sushi-10" />
+        <h4 class="popular-foods__card-title">Ramen Legendo</h4>
 
-                <div class="portfolio-box">
-                    <img src="Kiss.png" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Tribute page</h4>
-                        <p>Very first project i ever completed with HTML and CSS a tribute to my favorite band</p>
-                        <a href="https://codepen.io/JerryCiccotti26/pen/bWdgog"><i class="bx bx-link-external"></i></a>
-                    </div>
-                </div>
+        <div class="popular-foods__card-details flex-between">
+          <div class="popular-foods__card-rating">
+            <img src="assets/star.svg" alt="star" />
+            <p>4.8</p>
+          </div>
 
-                <div class="portfolio-box">
-                    <img src="Hotel.png" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Web Design</h4>
-                        <p>Mock hotel site built with html and css</p>
-                        <a href="https://replit.com/@jerryciccotti1/hotel"><i class="bx bx-link-external"></i></a>
-                    </div>
-                </div>
+          <p class="popular-foods__card-price">$21.00</p>
+        </div>
+      </article>
+    </div>
 
-                <div class="portfolio-box">
-                    <img src="dashboard.png" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Finance Dashboard</h4>
-                        <p>Html tables dashboard</p>
-                        <a href="https://codepen.io/Jerry-Ciccotti/full/KKbdjrr"><i class="bx bx-link-external"></i></a>
-                    </div>
-                </div>
+    <button class="popular-foods__button">
+      Explore Food
+      <img src="assets/arrow-right.svg" alt="arrow-right" />
+    </button>
+  </section>
+  <!-- END: popular foods -->
 
-                <div class="portfolio-box">
-                    <img src="cardealer.png" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Find a ride</h4>
-                        <p>car dealership landing page built with html and css</p>
-                        <a href="https://codepen.io/Jerry-Ciccotti/pen/mdaJJqP"><i class="bx bx-link-external"></i></a>
-                    </div>
-                </div>
+  <section class="trending" id="food">
+    <!-- START: trending sushi -->
+    <section class="trending-sushi">
+      <div class="trending__content" data-aos="fade-right">
+        <p class="sushi__subtitle">What’s Trending / トレンド</p>
 
-                
-                <div class="portfolio-box">
-                    <img src="registration.png" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Web Design</h4>
-                        <p>registration page built with html and css with Html forms</p>
-                        <a href="https://codepen.io/JerryCiccotti26/full/qByYeer"><i class="bx bx-link-external"></i></a>
-                    </div>
-                </div>
+        <h3 class="sushi__title">Japanese Sushi</h3>
+        <p class="sushi__description">
+          Feel the taste of the most delicious Sushi here.
+        </p>
 
-                <div class="portfolio-box">
-                    <img src="simple-login.png" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Web Design</h4>
-                        <p>simple log in form with custom background</p>
-                        <a href="https://codepen.io/Jerry-Ciccotti/full/qBLEYeg/408e837941000543a92dfb26e9e9fb67"><i class="bx bx-link-external"></i></a>
-                    </div>
-                </div>
-
-                <div class="portfolio-box">
-                    <img src="quiz.png" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Acessibility Quiz</h4>
-                        <p>Quiz built with accessibility best practices</p>
-                        <a href="https://codepen.io/JerryCiccotti26/pen/ExGoMKv"><i class="bx bx-link-external"></i></a>
-                    </div>
-                </div>
+        <ul class="trending__list flex-between">
+          <li>
+            <div class="trending__icon flex-center">
+              <img src="assets/check.svg" alt="check" />
             </div>
-           
-        </section>
- <!--contact section-->
- <section class="contact" id="contact">
-   <h2 class="heading">Contact <span>Me!</span></h2>
-   <form action="#">
-    <div class="input-box">
-        <input type="text" placeholder="Full Name">
-        <input type="text" placeholder="Email Address">
+            <p>Make Sushi</p>
+          </li>
+          <li>
+            <div class="trending__icon flex-center">
+              <img src="assets/check.svg" alt="check" />
+            </div>
+            <p>Nigiri Sushi</p>
+          </li>
+          <li>
+            <div class="trending__icon flex-center">
+              <img src="assets/check.svg" alt="check" />
+            </div>
+            <p>Oshizushi</p>
+          </li>
+          <li>
+            <div class="trending__icon flex-center">
+              <img src="assets/check.svg" alt="check" />
+            </div>
+            <p>Temaki Sushi</p>
+          </li>
+          <li>
+            <div class="trending__icon flex-center">
+              <img src="assets/check.svg" alt="check" />
+            </div>
+            <p>Uramaki Sushi</p>
+          </li>
+          <li>
+            <div class="trending__icon flex-center">
+              <img src="assets/check.svg" alt="check" />
+            </div>
+            <p>Inari Sushi</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="trending__image flex-center">
+        <img src="assets/sushi-5.png" alt="sushi-5" data-aos="fade-left" />
+
+        <div class="trending__arrow trending__arrow-left">
+          <img src="assets/arrow-vertical.svg" alt="arrow-vertical" />
+        </div>
+
+        <div class="trending__arrow trending__arrow-bottom">
+          <img src="assets/arrow-horizontal.svg" alt="arrow-horizontal" />
+        </div>
+      </div>
+    </section>
+    <!-- END: trending sushi -->
+
+    <!-- START: discover button -->
+    <div class="trending__discover" data-aos="zoom-in">
+      <p>Discover</p>
     </div>
-    <div class="input-box">
-        <input type="number" placeholder="Phone number">
-        <input type="text" placeholder="Email Subject">
+    <!-- END: discover button -->
+
+    <!-- START: trending drinks -->
+    <section class="trending-drink">
+      <div class="trending__image flex-center">
+        <img src="assets/sushi-4.png" alt="sushi-4" data-aos="fade-right" />
+
+        <div class="trending__arrow trending__arrow-top">
+          <img src="assets/arrow-horizontal.svg" alt="arrow-horizontal" />
+        </div>
+
+        <div class="trending__arrow trending__arrow-right">
+          <img src="assets/arrow-vertical.svg" alt="arrow-vertical" />
+        </div>
+      </div>
+
+      <div class="trending__content" data-aos="fade-left">
+        <p class="sushi__subtitle">What’s Trending / トレンド</p>
+
+        <h3 class="sushi__title">Japanese Drinks</h3>
+        <p class="sushi__description">
+          Feel the taste of most delicious Japanese drinks here.
+        </p>
+
+        <ul class="trending__list flex-between">
+          <li>
+            <div class="trending__icon flex-center">
+              <img src="assets/check.svg" alt="check" />
+            </div>
+            <p>Oruncha</p>
+          </li>
+          <li>
+            <div class="trending__icon flex-center">
+              <img src="assets/check.svg" alt="check" />
+            </div>
+            <p>Ofukucha</p>
+          </li>
+          <li>
+            <div class="trending__icon flex-center">
+              <img src="assets/check.svg" alt="check" />
+            </div>
+            <p>Sakura Tea</p>
+          </li>
+          <li>
+            <div class="trending__icon flex-center">
+              <img src="assets/check.svg" alt="check" />
+            </div>
+            <p>Kombu-cha</p>
+          </li>
+          <li>
+            <div class="trending__icon flex-center">
+              <img src="assets/check.svg" alt="check" />
+            </div>
+            <p>Aojiru</p>
+          </li>
+          <li>
+            <div class="trending__icon flex-center">
+              <img src="assets/check.svg" alt="check" />
+            </div>
+            <p>Mugicha</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- END: trending drinks -->
+  </section>
+
+  <!-- START: subscribe -->
+  <section class="subscription flex-center" id="services">
+    <h2 data-aos="flip-down">
+      Get offers straight <br />
+      to your inbox
+    </h2>
+    <p data-aos="fade-up">Sign up for the Sushiman newsletter</p>
+
+    <div class="subscription__form" data-aos="fade-up">
+      <input type="text" placeholder="Enter email address" />
+      <button>Get Started</button>
     </div>
-    <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
-    <input type="submit" value="Send Message" class="btn">
-   </form>
- </section>
+  </section>
+  <!-- END: subscribe -->
 
- <footer class="footer">
-    <div class="footer-text">
-        <p>Copyright &copy; 2023 by Jerry Ciccotti| All Rights Reserved.</p>
-    </div>
+  <!-- START: footer -->
+  <footer class="footer flex-between">
+    <h3 class="footer__logo"><span>Sushi</span>man</h3>
 
-    <div class="footer-iconTop">
-        <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
-    </div>
-</footer>
+    <ul class="footer__nav">
+      <li>
+        <a href="#menu">Menu</a>
+      </li>
+      <li>
+        <a href="#food">Food</a>
+      </li>
+      <li>
+        <a href="#services">Services</a>
+      </li>
+      <li>
+        <a href="#about-us">About us</a>
+      </li>
+    </ul>
 
+    <ul class="footer__social">
+      <li class="flex-center">
+        <img src="assets/facebook.svg" alt="facebook" />
+      </li>
+      <li class="flex-center">
+        <img src="assets/twitter.svg" alt="twitter" />
+      </li>
+      <li class="flex-center">
+        <img src="assets/instagram.svg" alt="instagram" />
+      </li>
+    </ul>
+  </footer>
+  <!-- END: footer -->
 
-<!-- scroll reveal -->
-<script src="https://unpkg.com/scrollreveal"></script>
+  <!-- Type module is necessary in order to use ECMAScript module (import/export) -->
+  <script src="js/script.js" type="module"></script>
+</body>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12">
-
-    </script>
-    <script src="script.js"></script>
-    </body>
 </html>
