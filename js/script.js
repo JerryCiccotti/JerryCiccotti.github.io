@@ -1,58 +1,49 @@
-// import images as relative image path won't work with vite/vercel.
-import check from '../assets/check.svg'
-import star from '../assets/star.svg'
-import sushi12 from '../assets/sushi-12.png'
-import sushi11 from '../assets/sushi-11.png'
-import sushi10 from '../assets/sushi-10.png'
+document.addEventListener('DOMContentLoaded', function () {
+  // Mobile Menu
+  const toggleButton = document.querySelector('.navbar__mobile-menu-toggle');
+  const mobileMenu = document.querySelector('.navbar__mobile-menu-items');
 
-import AOS from "aos";
-import "aos/dist/aos.css";
+  toggleButton.addEventListener('click', function () {
+    mobileMenu.classList.toggle('active');
+  });
 
-// init AOS animation
-AOS.init({
-    duration: 1000,
-    offset: 100,
+  // Video Modal
+  const modal = document.getElementById('videoModal');
+  const videoButton = document.querySelector('.preview__video-button');
+  const closeButton = document.querySelector('.modal__close-button');
+  const videoPlayer = document.getElementById('videoPlayer');
+
+  // Open modal when clicked
+  videoButton.addEventListener('click', function () {
+    // Show modal
+    modal.style.display = 'block';
+
+    //Replace the src attribute with the video URL
+    videoPlayer.src = 'https://www.youtube.com/embed/8sXRyHI3bLw';
+
+    // Close modal on close button click
+    closeButton.addEventListener('click', function () {
+      modal.style.display = 'none';
+      videoPlayer.src = '';
+    });
+
+    // Close modal on outter click
+    window.addEventListener('click', function (event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+        videoPlayer.src = '';
+      }
+    });
+  });
 });
 
-const trendingSushis = [
-    'Make Sushi',
-    'Nigiri Sushi',
-    'Oshizushi',
-    'Temaki Sushi',
-    'Uramaki Sushi',
-    'Inari Sushi'
-];
+// Navigation background on scroll
+window.addEventListener('scroll', function () {
+  const navbar = document.querySelector('.navbar');
 
-const trendingDrinks = [
-    "Oruncha",
-    "Ofukucha",
-    "Sakura Tea",
-    "Kombu-cha",
-    "Aojiru",
-    "Mugicha",
-]
-
-const cards = [
-    {
-        imgSrc: sushi12,
-        alt: "sushi-12",
-        title: "Chezu Sushi",
-        rating: "4.8",
-        price: "$21.00"
-    },
-    {
-        imgSrc: sushi11,
-        alt: "sushi-11",
-        title: "Originale Sushi",
-        rating: "4.8",
-        price: "$21.00",
-        active: true
-    },
-    {
-        imgSrc: sushi10,
-        alt: "sushi-10",
-        title: "Ramen Legendo",
-        rating: "4.8",
-        price: "$21.00"
-    }
-];
+  if (window.scrollY > 0) {
+    navbar.classList.add('navbar--scroll');
+  } else {
+    navbar.classList.remove('navbar--scroll');
+  }
+});
